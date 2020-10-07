@@ -10,9 +10,8 @@ let photosArray = [];
 var failedAttemps = 0;
 
 // Unsplash PI
-const apiKey = "your api key here";
+const apiProxy = "https://afternoon-ocean-69095.herokuapp.com/unsplash";
 let count = 5;
-const apiUrl = `https://api.unsplash.com/photos/random?client_id=${apiKey}&count=${apiKey}`;
 
 // Checks if all images were loaded
 function imageLoaded() {
@@ -60,7 +59,7 @@ function displayPhotos() {
 // Get photos using Unsplash API
 async function getPhotos() {
 	try {
-		const reponse = await fetch(apiUrl);
+		const reponse = await fetch(`${apiProxy}&count= ${count}`);
 		photosArray = await reponse.json();
 		displayPhotos();
 	} catch (error) {
