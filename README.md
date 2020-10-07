@@ -1,2 +1,2 @@
 # infinite-scroll
- Shows how infinite scrolling is made using Uplash API for sourcing images.
+ Shows how infinite scrolling is made using https://unsplash.com/ API for sourcing images.
